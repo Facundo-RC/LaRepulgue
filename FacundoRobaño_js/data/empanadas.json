@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Carne clásica",
+        "categoria": "carne",
+        "precio": 1800,
+        "descripcion": "Carne picada, cebolla, huevo y aceitunas",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 2,
+        "nombre": "Carne cortada a cuchillo",
+        "categoria": "carne",
+        "precio": 1900,
+        "descripcion": "Carne cortada a mano, cebolla y huevo",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 3,
+        "nombre": "Carne picante",
+        "categoria": "carne",
+        "precio": 1800,
+        "descripcion": "Carne picada con ají molido y pimentón",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 4,
+        "nombre": "Pollo clásica",
+        "categoria": "pollo",
+        "precio": 1700,
+        "descripcion": "Pollo desmenuzado con cebolla y morrón",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 5,
+        "nombre": "Pollo a la crema",
+        "categoria": "pollo",
+        "precio": 1700,
+        "descripcion": "Pollo con salsa blanca y verdeo",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 6,
+        "nombre": "Verdura",
+        "categoria": "verdura",
+        "precio": 1600,
+        "descripcion": "Acelga, salsa blanca y queso",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 7,
+        "nombre": "Humita",
+        "categoria": "verdura",
+        "precio": 1600,
+        "descripcion": "Choclo cremoso con zapallo y queso",
+        "imagen": "assets/empanada-entera.svg"
+    },
+    {
+        "id": 8,
+        "nombre": "Jamón y queso",
+        "categoria": "jyq",
+        "precio": 1600,
+        "descripcion": "Jamón cocido y mozzarella",
+        "imagen": "assets/empanada-entera.svg"
+    }
+]
