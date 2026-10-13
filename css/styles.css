@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --masa: #E9A23B;
+    --masa-oscura: #C9831F;
+    --horno: #7A3E1D;
+    --crema: #FFF8EC;
+    --salsa: #C0392B;
+    --texto: #3B2A1E;
+    --borde: #EEDFC4;
+
+    --fuente-titulos: 'Lobster', cursive;
+    --fuente-texto: 'Nunito', system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--texto);
+    font-family: var(--fuente-texto);
+}
+
+/* Barra superior */
+
+.barra-principal {
+    background-color: var(--horno);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.barra-principal .navbar-brand {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--masa);
+}
+
+/* Botones: base común */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(233, 162, 59, 0.45);
+}
+
+.btn-carrito {
+    padding: 8px 18px;
+    border-radius: 999px;
+    background-color: var(--masa);
+    color: var(--texto);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-carrito:hover {
+    background-color: white;
+    color: var(--horno);
+}
+
+.btn-carrito .badge {
+    min-width: 24px;
+    background-color: var(--salsa);
+    color: white;
+}
+
+.boton-filtro {
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 2px solid var(--borde);
+    background-color: white;
+    color: var(--horno);
+}
+
+.boton-filtro:hover {
+    border-color: var(--masa);
+    background-color: white;
+    color: var(--horno);
+}
+
+.boton-filtro.active,
+.boton-filtro.active:hover {
+    border-color: var(--horno);
+    background-color: var(--horno);
+    color: white;
+    box-shadow: 0 4px 12px rgba(122, 62, 29, 0.25);
+}
+
+.boton-agregar {
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    background-color: var(--masa);
+    color: var(--texto);
+    box-shadow: 0 4px 0 var(--masa-oscura);
+}
+
+.boton-agregar:hover {
+    background-color: var(--horno);
+    color: white;
+    box-shadow: 0 4px 0 #5A2C13;
+}
+
+.boton-agregar:active {
+    box-shadow: 0 1px 0 #5A2C13;
+    transform: translateY(3px);
+}
+
+.boton-confirmar {
+    padding: 12px 28px;
+    border: none;
+    background-color: var(--horno);
+    color: white;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 16px rgba(122, 62, 29, 0.3);
+}
+
+.boton-confirmar:hover {
+    background-color: #5A2C13;
+    color: white;
+    box-shadow: 0 8px 20px rgba(122, 62, 29, 0.4);
+}
+
+.boton-vaciar {
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: #8A7A6A;
+}
+
+.boton-vaciar:hover {
+    border-color: var(--salsa);
+    background-color: #FDF1EF;
+    color: var(--salsa);
+}
+
+/* Selector de cantidad (− 2 +) y botón eliminar del pedido */
+
+.selector-cantidad {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid var(--borde);
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.selector-cantidad button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background-color: transparent;
+    color: var(--horno);
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+.selector-cantidad button:hover {
+    background-color: var(--crema);
+}
+
+.selector-cantidad span {
+    min-width: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.boton-icono {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #A89888;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-icono:hover {
+    background-color: #FDF1EF;
+    color: var(--salsa);
+}
+
+.precio-item {
+    min-width: 70px;
+    text-align: right;
+}
+
+/* Portada */
+
+header {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 48px 16px;
+    color: white;
+    background-image: linear-gradient(#3b2a1e, var(--horno));
+}
+
+header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    color: var(--masa);
+    text-shadow: 3px 3px 0 var(--horno);
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Títulos de sección */
+
+h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--horno);
+    font-size: 2.2rem;
+}
+
+/* Tarjetas de empanadas */
+
+#contenedor-empanadas .card {
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contenedor-empanadas .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(122, 62, 29, 0.15);
+}
+
+/* Foto de la empanada */
+
+.foto {
+    height: 170px;
+    margin: 16px 16px 0;
+    border-radius: 12px;
+    background-color: var(--crema);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+#contenedor-empanadas .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor-empanadas .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#contenedor-empanadas .card-text {
+    color: #7A6A5A;
+    flex-grow: 1;
+}
+
+/* Pedido */
+
+#seccion-pedido {
+    scroll-margin-top: 80px;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(122, 62, 29, 0.08);
+}
+
+#seccion-pedido h2 {
+    margin-bottom: 16px;
+}
+
+#form-entrega {
+    background-color: var(--crema);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+#form-entrega h3 {
+    color: var(--horno);
+    font-weight: 700;
+}
+
+#form-entrega .form-check-input:checked {
+    background-color: var(--horno);
+    border-color: var(--horno);
+}
+
+#form-entrega .form-control:focus,
+#form-entrega .form-select:focus,
+#form-entrega .form-check-input:focus {
+    border-color: var(--masa);
+    box-shadow: 0 0 0 3px rgba(233, 162, 59, 0.3);
+}
+
+#resumen-pedido {
+    text-align: right;
+    margin: 16px 0;
+}
+
+#resumen-pedido p {
+    margin-bottom: 4px;
+}
+
+#resumen-pedido .total {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#total-pedido {
+    color: var(--salsa);
+}
+
+/* Pie de página */
+
+footer {
+    background-color: var(--horno);
+    color: var(--crema);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Celulares */
+
+@media (max-width: 576px) {
+    #lista-pedido > div {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 8px;
+    }
+
+    #resumen-pedido {
+        text-align: left;
+    }
+}
