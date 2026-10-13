@@ -36,10 +36,8 @@ js/       pedido.js (lógica y storage) · index.js (DOM y eventos)
 | **G. Simulador** | Circuito completo: menú → pedido → cantidades → entrega → total → confirmación. |
 | **H. Código claro** | Lógica separada del DOM, nombres claros y sin código comentado. |
 
-## Tecnologías
+## Herramientas
 
 HTML · CSS · JavaScript · Bootstrap 5 · Bootstrap Icons · SweetAlert2
 
-## Autor
 
-Facundo Robaño
